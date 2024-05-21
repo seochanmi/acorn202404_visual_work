@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType11.html</title>
+</head>
+<body>
+    <h1>function type의 매개변수</h1>
+    <script>
+        let printMsg = function(msg){    //()안은 함수를 실행할때 전달되는 값을 받을 매개변수를 선언할수있다! (msg)같이 매개변수는 let을 사용하지않고 마음대로 하면됨
+            console.log("----------");
+            console.log(msg);
+            console.log("----------");
+        };  //{}안은 함수를 실행했을때 실행할 code작성
+
+        printMsg("hello");
+        printMsg("bye");
+
+        //매개 변수가 2개인 함수
+        let printSum = function(num1, num2){
+            //매개변수에 전달된 2개의 값을 +연산을 해서
+            let result=num1+num2;
+            //결과값을 콘솔창에 출력
+            console.log(result);
+        };
+
+        printSum(10, 20);
+        printSum(100, -10);
+
+        let getSum =function(num1, num2){
+            //매개변수에 전달된 두수의 합을 구해서
+            let result=num1+num2;
+            //결과값을 리턴하기
+            return result;
+        }
+        let result1 = getSum(10, 20);
+        let result2 = getSum(100, -10);
+    </script>
+</body>
+</html>

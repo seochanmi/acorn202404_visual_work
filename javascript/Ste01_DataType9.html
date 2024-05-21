@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType9.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <p>
+        <strong>function</strong> type의 영역(scope)
+    </p>
+    <script>
+        /*
+            페이지 로딩 시점에 실행되는 이영역은 global영역(전역) 입니다.
+            global 영역에 정의된 자원들은 어디에서나 사용 가능합니다.
+        */
+
+        let myName ="김구라";    //myName은 전역변수
+         let ourName ="강아지";
+        function test(){
+            //함수의 중괄호 안에 속한 이영역은  local영역입니다.
+            //local영역안에 정의된 자원은 해당 loca영역 안에서만 사용할수있습니다.
+            let yourName = "해골";   //yourName은 지역변수, 함수를 콜할때마다 새로 만들어짐
+            console.log(yourName);
+        }
+
+            function test2(){
+                //local 영역 안에서 바깥영역에서 정의된 함수를 사용할수있습니다. 
+                console.log(myName);
+        }
+
+            function test3(){
+                console.log(ourName);
+            }
+    </script>
+</body>
+</html>

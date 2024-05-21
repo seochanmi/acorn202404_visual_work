@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType12.html</title>
+</head>
+<body>
+    <h1>function의 type의 매개변수</h1>
+    <p>
+        함수를 call하면서 매개변수에 function type을 전달하는 경우도 많다
+    </p>
+    <button onclick="sleepRoom()">잠자기</button>  
+                                                    <!-- 함수를 콜해야 하니 변수옆에 ()도 적어야됨 -->
+
+    <script>
+        let sleepRoom = function(){
+        console.log("잠을 자세요");
+    };
+        //방에 들어가는 동작이라고 가정
+    let enterRoom = function(action){
+        console.log("방에 들어갔습니다");
+        action();
+    };
+    //함수를 call하면서 함수 내부에서 사용될 예정인 함수 전달하기, 매개변수를 써놔서 전달을 하여 이미 콘솔창에 텍스트가 입력되어있음
+    enterRoom(function(){
+        console.log("청소를 합니다");
+    });
+
+    enterRoom(function(){
+        console.log("게임을 합니다");
+    });
+    </script>
+</body>
+</html>
+
+<!-- <button onclick="sleep()">잠자기</button>
+
+function sleep(){
+    enterRoom(()=>{
+        console.log("잠을 잡니다");
+    }); -->
